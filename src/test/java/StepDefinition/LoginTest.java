@@ -17,7 +17,7 @@ import resources.base;
 
 public class LoginTest extends base {
 	
-	WebDriver driver;
+	public WebDriver driver;
 	Logger log;
 	@BeforeMethod
 	public void setup() throws IOException {
@@ -27,10 +27,8 @@ public class LoginTest extends base {
 		driver.get(prop.getProperty("url"));
 		log.debug("Navigated to Application URL");
 	}
-	@Test
+	@Test()
 	public void login() throws IOException, InterruptedException {
-		
-	
 	LandingPage landingpage = new LandingPage(driver);
 	landingpage.myAccountdropdown().click();
 	log.debug("CLicked on My Account Drop-down");
@@ -43,9 +41,9 @@ public class LoginTest extends base {
 	log.debug("Entered Password");
 	loginpage.logginbutton().click();
 	log.debug("clicked on Login Button");
-	Thread.sleep(10000);
 	MyAccountPage myaccountpage = new MyAccountPage(driver);
 	Assert.assertTrue(myaccountpage.EditYourAccountInformationLink().isDisplayed());
+	Assert.assertTrue(false);
 	log.info("Successfully Logged-in");
 	}
 	@AfterMethod
