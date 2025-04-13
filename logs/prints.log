@@ -16,3 +16,21 @@
 15:02:44.265 [main] DEBUG StepDefinition.LoginTest - clicked on Login Button
 15:02:54.342 [main] DEBUG StepDefinition.LoginTest - Successfully Loggedin
 15:02:54.584 [main] DEBUG StepDefinition.LoginTest - Browser Closed
+15:08:12.679 [main] DEBUG StepDefinition.LoginTest - browser got Launched
+15:08:14.491 [main] DEBUG StepDefinition.LoginTest - Navigated to Application URL
+15:08:14.625 [main] DEBUG StepDefinition.LoginTest - CLicked on My Account Drop-down
+15:08:14.965 [main] DEBUG StepDefinition.LoginTest - Clicked on Login Button
+15:08:15.107 [main] DEBUG StepDefinition.LoginTest - Entered Email
+15:08:15.162 [main] DEBUG StepDefinition.LoginTest - Entered Password
+15:08:16.009 [main] DEBUG StepDefinition.LoginTest - clicked on Login Button
+15:08:26.110 [main] INFO  StepDefinition.LoginTest - Successfully Logged-in
+15:08:26.338 [main] DEBUG StepDefinition.LoginTest - Browser Closed
+15:16:11.365 [TestNG-tests-1] DEBUG StepDefinition.LoginTest - browser got Launched
+15:16:16.005 [TestNG-tests-1] DEBUG StepDefinition.LoginTest - Navigated to Application URL
+15:16:16.188 [TestNG-tests-1] DEBUG StepDefinition.LoginTest - CLicked on My Account Drop-down
+15:16:16.643 [TestNG-tests-1] DEBUG StepDefinition.LoginTest - Clicked on Login Button
+15:16:16.790 [TestNG-tests-1] DEBUG StepDefinition.LoginTest - Entered Email
+15:16:16.854 [TestNG-tests-1] DEBUG StepDefinition.LoginTest - Entered Password
+15:16:16.942 [TestNG-tests-1] DEBUG StepDefinition.LoginTest - clicked on Login Button
+15:16:27.041 [TestNG-tests-1] INFO  StepDefinition.LoginTest - Successfully Logged-in
+15:16:27.739 [TestNG-tests-1] DEBUG StepDefinition.LoginTest - Browser Closed

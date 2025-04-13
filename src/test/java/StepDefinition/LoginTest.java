@@ -46,7 +46,7 @@ public class LoginTest extends base {
 	Thread.sleep(10000);
 	MyAccountPage myaccountpage = new MyAccountPage(driver);
 	Assert.assertTrue(myaccountpage.EditYourAccountInformationLink().isDisplayed());
-	log.debug("Successfully Logged-in");
+	log.info("Successfully Logged-in");
 	}
 	@AfterMethod
 	public void closure() {
