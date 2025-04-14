@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -41,11 +43,12 @@ public class base {
 		return driver;
 	}
 	
-	public void takeScreenshot(String testName, WebDriver driver) throws IOException {
-	
+	public String takeScreenshot(String testName, WebDriver driver) throws IOException {
+		//String timestamp = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(new Date());
 		File SourceFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		String destinationFilePath = System.getProperty("user.dir")+"\\screenshots\\"+testName+".png";
 		FileUtils.copyFile(SourceFile, new File(destinationFilePath));
+		return destinationFilePath;
 	}
 
 }
