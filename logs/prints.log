@@ -168,3 +168,11 @@
 14:19:10.184 [main] DEBUG StepDefinition.LoginTest - Entered Password
 14:19:11.194 [main] DEBUG StepDefinition.LoginTest - clicked on Login Button
 14:19:11.880 [main] DEBUG StepDefinition.LoginTest - Browser Closed
+14:29:57.434 [main] DEBUG StepDefinition.LoginTest - browser got Launched
+14:30:00.895 [main] DEBUG StepDefinition.LoginTest - Navigated to Application URL
+14:30:01.172 [main] DEBUG StepDefinition.LoginTest - CLicked on My Account Drop-down
+14:30:02.831 [main] DEBUG StepDefinition.LoginTest - Clicked on Login Button
+14:30:03.026 [main] DEBUG StepDefinition.LoginTest - Entered Email
+14:30:03.119 [main] DEBUG StepDefinition.LoginTest - Entered Password
+14:30:06.684 [main] DEBUG StepDefinition.LoginTest - clicked on Login Button
+14:30:07.320 [main] DEBUG StepDefinition.LoginTest - Browser Closed

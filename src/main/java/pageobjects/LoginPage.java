@@ -13,13 +13,13 @@ public class LoginPage {
 			
 		}
 		@FindBy(xpath="//input[@id='input-email']")
-		WebElement Emailaddressfield;
+		private WebElement Emailaddressfield;
 		
 		@FindBy(xpath="//input[@id='input-password']")
-		WebElement PasswordField;
+		private WebElement PasswordField;
 		
 		@FindBy(xpath="//input[@type='submit']")
-		WebElement logginbutton;
+		private WebElement logginbutton;
 		
 		public WebElement Emailaddressfield() {
 			return Emailaddressfield;
