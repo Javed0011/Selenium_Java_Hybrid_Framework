@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="8.094" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-04-17T14:28:07.145240100Z">
+<testcase classname="Application Login" name="Login with valid credentials" time="7.865">
+<system-out><![CDATA[
+Given Open any Browser......................................................passed
+And Navigate to Login page..................................................passed
+When User enters username as "javed.nadaf@gmail.com" and password as "123456789" into the fields.passed
+And User clicks on Login button.............................................passed
+Then Verify user is able to successfully login..............................passed
+]]></system-out>
+</testcase>
+</testsuite>

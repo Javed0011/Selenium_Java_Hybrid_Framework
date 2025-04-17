@@ -176,3 +176,43 @@
 14:30:03.119 [main] DEBUG StepDefinition.LoginTest - Entered Password
 14:30:06.684 [main] DEBUG StepDefinition.LoginTest - clicked on Login Button
 14:30:07.320 [main] DEBUG StepDefinition.LoginTest - Browser Closed
+19:44:52.709 [main] DEBUG StepDefinition.LoginTest - browser got Launched
+19:44:56.364 [main] DEBUG StepDefinition.LoginTest - Navigated to Application URL
+19:44:56.624 [main] DEBUG StepDefinition.LoginTest - CLicked on My Account Drop-down
+19:44:57.042 [main] DEBUG StepDefinition.LoginTest - Clicked on Login Button
+19:44:57.228 [main] DEBUG StepDefinition.LoginTest - Entered Email
+19:44:57.335 [main] DEBUG StepDefinition.LoginTest - Entered Password
+19:44:58.352 [main] DEBUG StepDefinition.LoginTest - clicked on Login Button
+19:44:58.456 [main] INFO  StepDefinition.LoginTest - Successfully Logged-in
+19:47:05.242 [main] DEBUG StepDefinition.LoginTest - browser got Launched
+19:47:07.665 [main] DEBUG StepDefinition.LoginTest - Navigated to Application URL
+19:47:07.852 [main] DEBUG StepDefinition.LoginTest - CLicked on My Account Drop-down
+19:47:08.346 [main] DEBUG StepDefinition.LoginTest - Clicked on Login Button
+19:47:08.572 [main] DEBUG StepDefinition.LoginTest - Entered Email
+19:47:08.681 [main] DEBUG StepDefinition.LoginTest - Entered Password
+19:47:08.757 [main] DEBUG StepDefinition.LoginTest - clicked on Login Button
+19:47:09.857 [main] INFO  StepDefinition.LoginTest - Successfully Logged-in
+19:50:54.958 [main] DEBUG StepDefinition.LoginTest - browser got Launched
+19:50:58.424 [main] DEBUG StepDefinition.LoginTest - Navigated to Application URL
+19:50:58.762 [main] DEBUG StepDefinition.LoginTest - CLicked on My Account Drop-down
+19:50:59.279 [main] DEBUG StepDefinition.LoginTest - Clicked on Login Button
+19:50:59.472 [main] DEBUG StepDefinition.LoginTest - Entered Email
+19:50:59.654 [main] DEBUG StepDefinition.LoginTest - Entered Password
+19:51:00.851 [main] DEBUG StepDefinition.LoginTest - clicked on Login Button
+19:51:00.916 [main] INFO  StepDefinition.LoginTest - Successfully Logged-in
+19:55:40.339 [main] DEBUG StepDefinition.LoginTest - browser got Launched
+19:55:41.107 [main] DEBUG StepDefinition.LoginTest - Navigated to Application URL
+19:55:43.782 [main] DEBUG StepDefinition.LoginTest - CLicked on My Account Drop-down
+19:55:44.194 [main] DEBUG StepDefinition.LoginTest - Clicked on Login Button
+19:55:44.558 [main] DEBUG StepDefinition.LoginTest - Entered Email
+19:55:44.696 [main] DEBUG StepDefinition.LoginTest - Entered Password
+19:55:44.831 [main] DEBUG StepDefinition.LoginTest - clicked on Login Button
+19:55:46.504 [main] INFO  StepDefinition.LoginTest - Successfully Logged-in
+19:58:10.679 [main] DEBUG StepDefinition.LoginTest - browser got Launched
+19:58:12.666 [main] DEBUG StepDefinition.LoginTest - Navigated to Application URL
+19:58:12.875 [main] DEBUG StepDefinition.LoginTest - CLicked on My Account Drop-down
+19:58:13.312 [main] DEBUG StepDefinition.LoginTest - Clicked on Login Button
+19:58:13.514 [main] DEBUG StepDefinition.LoginTest - Entered Email
+19:58:13.643 [main] DEBUG StepDefinition.LoginTest - Entered Password
+19:58:13.721 [main] DEBUG StepDefinition.LoginTest - clicked on Login Button
+19:58:14.912 [main] INFO  StepDefinition.LoginTest - Successfully Logged-in
