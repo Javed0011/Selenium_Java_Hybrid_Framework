@@ -6,8 +6,11 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.Properties;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
+
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -20,7 +23,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class base {
-	WebDriver driver;
+	public static WebDriver driver;
 	public Properties prop;
 	public WebDriver initializeDriver() throws IOException{
 		prop = new Properties();
@@ -50,5 +53,15 @@ public class base {
 		FileUtils.copyFile(SourceFile, new File(destinationFilePath));
 		return destinationFilePath;
 	}
-
+	public void SwitchToPageByTitle(String PageTitle) throws InterruptedException {
+		Set<String> Windows = driver.getWindowHandles();
+		for(String Window : Windows) {
+			driver.switchTo().window(Window);
+			if(driver.getTitle().equals(PageTitle)) {
+				Thread.sleep(2000);
+				break;
+			}
+		}
+	}
+	
 }

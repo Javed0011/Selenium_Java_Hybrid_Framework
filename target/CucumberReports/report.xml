@@ -1,12 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="8.094" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-04-17T14:28:07.145240100Z">
-<testcase classname="Application Login" name="Login with valid credentials" time="7.865">
+<testsuite name="Cucumber" time="15.873" tests="3" skipped="0" failures="3" errors="0" timestamp="2025-04-18T14:29:36.467842600Z">
+<testcase classname="Search an Product and verify the Result Test" name="Search Product and verify the displyed Items - #1.1" time="5.22">
+<failure type="java.lang.AssertionError" message="expected [true] but found [false]">
+<![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at StepDefinition.ProductSearch.i_should_be_able_to_see_the_list_of_Products_getting_displayed(ProductSearch.java:52)
+	at ✽.i should be able to see the list of "<Products>" getting displayed(file:///C:/Users/javed/eclipse-workspace/Selenium_Java_Hybrid_Framework/src/test/java/Features/ProductSearch.feature:6)
+]]>
+</failure>
 <system-out><![CDATA[
-Given Open any Browser......................................................passed
-And Navigate to Login page..................................................passed
-When User enters username as "javed.nadaf@gmail.com" and password as "123456789" into the fields.passed
-And User clicks on Login button.............................................passed
-Then Verify user is able to successfully login..............................passed
+Given i Navigate to the Flipkart URL........................................passed
+When i Enter the "Apple" in Search field....................................passed
+And i click on search button................................................passed
+Then i should be able to see the list of "<Products>" getting displayed.....failed
+]]></system-out>
+</testcase>
+<testcase classname="Search an Product and verify the Result Test" name="Search Product and verify the displyed Items - #1.2" time="5.171">
+<failure type="java.lang.AssertionError" message="expected [true] but found [false]">
+<![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at StepDefinition.ProductSearch.i_should_be_able_to_see_the_list_of_Products_getting_displayed(ProductSearch.java:52)
+	at ✽.i should be able to see the list of "<Products>" getting displayed(file:///C:/Users/javed/eclipse-workspace/Selenium_Java_Hybrid_Framework/src/test/java/Features/ProductSearch.feature:6)
+]]>
+</failure>
+<system-out><![CDATA[
+Given i Navigate to the Flipkart URL........................................passed
+When i Enter the "Oppo" in Search field.....................................passed
+And i click on search button................................................passed
+Then i should be able to see the list of "<Products>" getting displayed.....failed
+]]></system-out>
+</testcase>
+<testcase classname="Search an Product and verify the Result Test" name="Search Product and verify the displyed Items - #1.3" time="5.317">
+<failure type="java.lang.AssertionError" message="expected [true] but found [false]">
+<![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at StepDefinition.ProductSearch.i_should_be_able_to_see_the_list_of_Products_getting_displayed(ProductSearch.java:52)
+	at ✽.i should be able to see the list of "<Products>" getting displayed(file:///C:/Users/javed/eclipse-workspace/Selenium_Java_Hybrid_Framework/src/test/java/Features/ProductSearch.feature:6)
+]]>
+</failure>
+<system-out><![CDATA[
+Given i Navigate to the Flipkart URL........................................passed
+When i Enter the "Acer" in Search field.....................................passed
+And i click on search button................................................passed
+Then i should be able to see the list of "<Products>" getting displayed.....failed
 ]]></system-out>
 </testcase>
 </testsuite>

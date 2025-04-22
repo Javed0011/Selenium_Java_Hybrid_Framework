@@ -1,5 +1,7 @@
 package pageobjects;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -19,6 +21,18 @@ public class LandingPage {
 		@FindBy(xpath="//a[text()='Login']")
 		private WebElement loginbutton;
 		
+		@FindBy(xpath="//input[@class='Pke_EE']")
+		private WebElement SearchField;
+		
+		@FindBy(xpath="//button[@class='_2iLD__']")
+		private WebElement SearchButton;
+		
+		@FindBy(xpath="//span[@class='BUOuZu']")
+		private WebElement SearchResultText;
+		
+		@FindBy(xpath="//div[@class='KzDlHZ']")
+		private List<WebElement> displayedProductslist;
+		
 		public WebElement myAccountdropdown() {
 			return myAccountdropdown;
 		}
@@ -26,6 +40,19 @@ public class LandingPage {
 			return loginbutton;
 		}
 		
+		public WebElement SearchField() {
+			return SearchField;
+		}
+		
+		public WebElement SearchButton() {
+			return SearchButton;
+		}
+		public WebElement SearchResultText() {
+			return SearchResultText;
+		}
+		public List<WebElement> displayedProductslist(){
+			return displayedProductslist;
+		}
 		
 		
 		

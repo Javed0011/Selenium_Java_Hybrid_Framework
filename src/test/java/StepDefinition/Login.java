@@ -17,7 +17,6 @@ import resources.base;
 
 public class Login extends base{
 	
-	public WebDriver driver;
 	Logger log;
 	
 	@Given("Open any Browser")

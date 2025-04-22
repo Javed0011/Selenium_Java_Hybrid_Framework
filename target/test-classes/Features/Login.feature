@@ -6,3 +6,7 @@ Feature: Application Login
    When User enters username as "javed.nadaf@gmail.com" and password as "123456789" into the fields
    And User clicks on Login button
    Then Verify user is able to successfully login
+   
+  
+
+   
