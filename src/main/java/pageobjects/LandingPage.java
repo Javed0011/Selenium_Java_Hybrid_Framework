@@ -33,6 +33,12 @@ public class LandingPage {
 		@FindBy(xpath="//div[@class='KzDlHZ']")
 		private List<WebElement> displayedProductslist;
 		
+		@FindBy(xpath="//span[text()='Fashion']")
+		private WebElement FashionDropdown;
+		
+		@FindBy(xpath="//a[text()=\"Men's Top Wear\"]")
+		private WebElement MensTopwearLink;
+		
 		public WebElement myAccountdropdown() {
 			return myAccountdropdown;
 		}
@@ -53,7 +59,11 @@ public class LandingPage {
 		public List<WebElement> displayedProductslist(){
 			return displayedProductslist;
 		}
-		
-		
+		public WebElement FashionDropdown() {
+			return FashionDropdown;
+		}
+		public WebElement MensTopwearLink() {
+			return MensTopwearLink;
+		}
 		
 }

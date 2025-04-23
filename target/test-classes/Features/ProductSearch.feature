@@ -22,3 +22,6 @@ Scenario Outline: Search Product and verify the displyed Items
 	 |Oppo   |
 	 |Acer   |
 	 
+		
+
+	 

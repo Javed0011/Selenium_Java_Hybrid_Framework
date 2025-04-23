@@ -44,5 +44,36 @@ public class ShoppingKart extends base {
 		Assert.assertTrue(driver.getTitle().contains("Shopping Cart | Flipkart.com"));
 		Assert.assertTrue(shoppingkartpage.ProductName().getText().equals(firstproductname));
 	}
+	@When("Add the product to Kart and verify the Product count")
+	public void Add_the_product_to_Kart_and_verify_the_Product_count() throws InterruptedException {
+		try {
+			productpage.AddtoKartButton().click();
+			}
+			catch(Exception e) {
+				productpage.AddToKartButton2().click();
+			}
+			Thread.sleep(3000);
+			Assert.assertTrue(driver.getTitle().contains("Shopping Cart | Flipkart.com"));
+			Assert.assertEquals(Integer.parseInt(shoppingkartpage.ProductCount().getAttribute("value")),1);
+	}
+	@When("Change the Productcount and Verify the Price")
+	public void Change_the_Productcount_and_Verify_the_Price() throws InterruptedException {
+		try {
+			productpage.AddtoKartButton().click();
+			}
+			catch(Exception e) {
+				productpage.AddToKartButton2().click();
+			}
+		wait.until(ExpectedConditions.titleContains("Shopping Cart | Flipkart.com"));
+		Assert.assertTrue(driver.getTitle().contains("Shopping Cart | Flipkart.com"));
+		Assert.assertEquals(Integer.parseInt(shoppingkartpage.ProductCount().getAttribute("value")),1);
+		String productprice = shoppingkartpage.ProductPrice().getText();
+		String totalprice = shoppingkartpage.TotalPrice().getText();
+		shoppingkartpage.IncreaseProductCountButton().click();
+		wait.until(ExpectedConditions.textToBePresentInElementValue(shoppingkartpage.ProductCount(),"2"));
+		Assert.assertNotEquals(productprice, shoppingkartpage.ProductPrice().getText());
+		Assert.assertNotEquals(totalprice, shoppingkartpage.TotalPrice().getText());
+		
+	}
 	
 }
