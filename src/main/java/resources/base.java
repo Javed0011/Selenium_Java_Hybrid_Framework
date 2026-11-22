@@ -6,10 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
-import java.util.Date;
-import java.util.Iterator;
-import java.util.Properties;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 
@@ -64,14 +61,24 @@ public class base {
 		return destinationFilePath;
 	}
 	public void SwitchToPageByTitle(String PageTitle) throws InterruptedException {
+
 		Set<String> Windows = driver.getWindowHandles();
-		for(String Window : Windows) {
+
+		for (String Window : Windows) {
+
 			driver.switchTo().window(Window);
-			if(driver.getTitle().equals(PageTitle)) {
+
+			if (Objects.requireNonNull(driver.getTitle()).contains(PageTitle)) {
 				Thread.sleep(2000);
 				break;
 			}
 		}
+	}
+	public void SwitchToPageByIndex(int Index) {
+
+		List<String> Windows = new ArrayList<>(driver.getWindowHandles());
+
+		driver.switchTo().window(Windows.get(Index));
 	}
 	public void WaitForThePagetobeLoaded() {
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
