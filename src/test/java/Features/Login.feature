@@ -1,5 +1,6 @@
 Feature: Application Login
 
+  @smokeTest
  Scenario: Login with valid credentials
    Given Open any Browser
    And Navigate to Login page

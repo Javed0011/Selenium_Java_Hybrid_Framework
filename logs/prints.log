@@ -229,3 +229,9 @@
 12:28:01.226 [main] DEBUG StepDefinition.LoginTest - Browser Closed
 19:53:08.533 [main] DEBUG StepDefinition.LoginTest - browser got Launched
 19:53:10.944 [main] DEBUG StepDefinition.LoginTest - Navigated to Application URL
+16:21:31.543 [main] DEBUG StepDefinition.LoginTest - browser got Launched
+16:21:33.847 [main] DEBUG StepDefinition.LoginTest - Navigated to Application URL
+16:23:15.874 [main] DEBUG StepDefinition.LoginTest - browser got Launched
+16:23:17.963 [main] DEBUG StepDefinition.LoginTest - Navigated to Application URL
+16:26:05.010 [main] DEBUG StepDefinition.LoginTest - browser got Launched
+16:26:07.065 [main] DEBUG StepDefinition.LoginTest - Navigated to Application URL
