@@ -17,7 +17,8 @@ import resources.base;
 import utilities.ExtentReporter;
 
 public class TestEcomm extends base {
-//    EcommLandingPage landingPage = new EcommLandingPage(driver);
+    public String ProductName1;
+    public String ProductName2;
     Properties prop = new Properties();
     FileInputStream fis;
     public TestEcomm() throws IOException {
@@ -77,6 +78,7 @@ public class TestEcomm extends base {
             ExtentReporter.logInfo("Clicked on search button");
             ExtentReporter.logPass("Searched for product: " + product);
         }
+
         @Then("Search results for {string} should be displayed")
         public void user_should_see_the_search_results_for(String product) throws IOException, InterruptedException{
 
@@ -95,4 +97,98 @@ public class TestEcomm extends base {
                 throw e;
             }
         }
+        @And("User selects the first product from search results")
+        public void user_selects_the_first_product_from_search_results() throws IOException, InterruptedException {
+        base b = new base();
+            EcommSearchedProductPage searchedProductPage = new EcommSearchedProductPage(driver);
+            ExtentReporter.createNode("Select First Product");
+            try {
+                ProductName1 = searchedProductPage.searchedProductTitle1().getText();
+                searchedProductPage.searchedProductTitle1().click();
+                ExtentReporter.logInfo("Clicked on the first product from search results" + ProductName1);
+                ExtentReporter.logPass("First product selected successfully");
+                b.SwitchToPageByIndex(1);
+                ExtentReporter.logInfo("Switched to product details page");
+            } catch (Throwable e) {
+                ExtentReporter.logFail(
+                        "Selecting first product failed: " + e.getMessage()
+                );
+                throw e;
+            }
+        }
+
+        @Then ("Product details page should be displayed")
+        public void product_details_page_should_be_displayed() throws IOException, InterruptedException {
+            base b = new base();
+            EcommProductDetlPage productDetailsPage = new EcommProductDetlPage(driver);
+            ExtentReporter.createNode("Product Details Page Validation");
+            b.WaitForThePagetobeLoaded();
+            try {
+                Assert.assertTrue(
+                        productDetailsPage.productTitle().isDisplayed(),
+                        "Product details page is not displayed"
+                );
+                ExtentReporter.logPass("Product details page is displayed successfully");
+            } catch (Throwable e) {
+                ExtentReporter.logFail(
+                        "Product details page validation failed: " + e.getMessage()
+                );
+                throw e;
+            }
+        }
+    @And("User adds the product to the shopping cart")
+    public void user_adds_the_product_to_the_shopping_cart() throws IOException, InterruptedException {
+        EcommProductDetlPage productDetailsPage = new EcommProductDetlPage(driver);
+        ExtentReporter.createNode("Add Product to Cart");
+        productDetailsPage.addToCartButton().click();
+        ExtentReporter.logInfo("Clicked on 'Add to Cart' button");
+        try {
+            Assert.assertTrue(
+                    productDetailsPage.addedToCartConfirmationText().isDisplayed(),
+                    "Product was not added to the cart"
+            );
+            ExtentReporter.logPass("Product added to the shopping cart successfully");
+        } catch (Throwable e) {
+            ExtentReporter.logFail(
+                    "Adding product to cart failed: " + e.getMessage()
+            );
+            throw e;
+
+        }
+    }
+
+    @Then("verify the Product in cart")
+    public void verify_the_product_in_cart() throws IOException, InterruptedException {
+        EcommProductDetlPage productDetailsPage = new EcommProductDetlPage(driver);
+        EcommShoppingCartPage shoppingCartPage = new EcommShoppingCartPage(driver);
+        ExtentReporter.createNode("Verify Product in Cart");
+        productDetailsPage.goToCartButton().click();
+        ExtentReporter.logInfo("Clicked on cart icon to view cart");
+        try{
+            Assert.assertTrue(
+                    shoppingCartPage.cartPageTitle().isDisplayed(),
+                    "Cart page is not displayed"
+            );
+            ExtentReporter.logPass("Navigated to the shopping cart page successfully");
+        } catch (Throwable e) {
+            ExtentReporter.logFail(
+                    "Cart page validation failed: " + e.getMessage()
+            );
+            throw e;
+        }
+        Thread.sleep(3000);
+        try {
+            ProductName2 = shoppingCartPage.cartProductText1().getText();
+            Assert.assertTrue(
+                    ProductName2.contains(ProductName1),
+                    "Product in cart does not match the selected product" + ProductName1 + " and " + ProductName2
+            );
+            ExtentReporter.logPass("Verified that the product in the cart matches the selected product:  " + ProductName1);
+        } catch (Throwable e) {
+            ExtentReporter.logFail(
+                    "Verification of product in cart failed: " + e.getMessage()
+            );
+            throw e;
+        }
+    }
 }
